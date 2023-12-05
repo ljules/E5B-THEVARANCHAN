@@ -86,7 +86,8 @@ class TypeArmeControleur(
     fun edit(@PathVariable id: Long, model: Model): String {
         val typeArme = this.typeArmeDao.findById(id).orElseThrow()
         model.addAttribute("typeArme", typeArme)
-        return "admin/typeArme/edit"
+
+        return "admin/typearme/edit"
     }
 
     /**
